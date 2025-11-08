@@ -1,0 +1,141 @@
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f8f9fc;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* ------------------------------
+   NAVIGATION
+------------------------------ */
+
+.nav {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4a4ad8;
+}
+
+.menu a {
+  margin-left: 18px;
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #4a4ad8;
+}
+
+/* Button */
+.btn {
+  background: #4a4ad8;
+  color: #fff !important;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+/* ------------------------------
+   FORM STYLES
+------------------------------ */
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4a4ad8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #3a3ad8;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  margin-top: 40px;
+  color: #666;
+  font-size: 14px;
+}

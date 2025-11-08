@@ -1,0 +1,5 @@
+- [x] Add functional contact form with validation in Contact.html (using Formspree for email sending)
+- [x] Implement dark mode toggle button in navigation
+- [x] Add back-to-top floating button
+- [x] Add GitHub/live demo links to project cards
+- [x] Enhance footer with social media icons, copyright, and quick links
