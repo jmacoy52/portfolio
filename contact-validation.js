@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
         from_name: nameInput.value.trim(),
         from_email: emailInput.value.trim(),
         message: messageInput.value.trim(),
-        to_email: 'josephmacoy52@gmail.com'
+        to_email: 'josephmacoy52@gmail.com',
+        reply_to: emailInput.value.trim() // This allows you to reply directly to the sender
       };
 
       emailjs.send('service_eeuxh2e', 'template_4e3312e', templateParams)
