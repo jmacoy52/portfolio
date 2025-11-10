@@ -1,5 +1,2 @@
-- [x] Add functional contact form with validation in Contact.html (using Formspree for email sending)
-- [x] Implement dark mode toggle button in navigation
-- [x] Add back-to-top floating button
-- [x] Add GitHub/live demo links to project cards
-- [x] Enhance footer with social media icons, copyright, and quick links
+- [x] Update CV download links in index.html and About.html to point to "assets/Joseph_Migbodzi_CV().pdf"
+- [x] Add passport picture to the hero section in index.html for visibility
