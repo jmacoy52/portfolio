@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('message');
+  const senderEmailInput = document.getElementById('sender_email');
 
   // Initialize EmailJS with your public key
   emailjs.init('oGBLR83UxTJmEDIlB');
@@ -32,6 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
       isValid = false;
     }
 
+    // Sender email validation (for replies)
+    if (!emailRegex.test(senderEmailInput.value.trim())) {
+      alert('Please enter a valid email address for replies.');
+      isValid = false;
+    }
+
     if (isValid) {
       // Send email using EmailJS
       const templateParams = {
@@ -39,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         from_email: emailInput.value.trim(),
         message: messageInput.value.trim(),
         to_email: 'josephmacoy52@gmail.com',
-        reply_to: emailInput.value.trim() // This allows you to reply directly to the sender
+        reply_to: senderEmailInput.value.trim() // This allows you to reply directly to the sender
       };
 
       emailjs.send('service_eeuxh2e', 'template_4e3312e', templateParams)
