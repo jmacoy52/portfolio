@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('message');
 
-  form.addEventListener('submit', function(event) {
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent default form submission
+
     let isValid = true;
 
     // Name validation
@@ -27,11 +29,35 @@ document.addEventListener('DOMContentLoaded', function() {
       isValid = false;
     }
 
-    if (!isValid) {
-      event.preventDefault();
-    } else {
-      // Show success message (Formspree will handle the actual submission)
-      alert('Thank you for your message! I will get back to you soon.');
+    if (isValid) {
+      // Send data to our Node.js server
+      const formData = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        message: messageInput.value.trim()
+      };
+
+      try {
+        const response = await fetch('https://mjay-portfolio-8zo8dyq8w-mjays-projects-4a886f4c.vercel.app/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          alert('Thank you for your message! I will get back to you soon.');
+          form.reset(); // Clear the form
+        } else {
+          alert('Failed to send message. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to send message. Please try again.');
+      }
     }
   });
 });
