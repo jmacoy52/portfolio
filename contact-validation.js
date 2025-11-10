@@ -1,11 +1,14 @@
-// Contact form validation and submission
+// Contact form validation and submission using EmailJS
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector('form');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('message');
 
-  form.addEventListener('submit', async function(event) {
+  // Initialize EmailJS with your public key
+  emailjs.init('oGBLR83UxTJmEDIlB');
+
+  form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
 
     let isValid = true;
@@ -30,34 +33,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (isValid) {
-      // Send data to our Node.js server
-      const formData = {
-        name: nameInput.value.trim(),
-        email: emailInput.value.trim(),
-        message: messageInput.value.trim()
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: nameInput.value.trim(),
+        from_email: emailInput.value.trim(),
+        message: messageInput.value.trim(),
+        to_email: 'josephmacoy52@gmail.com'
       };
 
-      try {
-        const response = await fetch('https://mjay-portfolio-8zo8dyq8w-mjays-projects-4a886f4c.vercel.app/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
-
-        const result = await response.json();
-
-        if (response.ok) {
+      emailjs.send('service_eeuxh2e', 'template_4e3312e', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
           alert('Thank you for your message! I will get back to you soon.');
           form.reset(); // Clear the form
-        } else {
-          alert('Failed to send message. Please try again.');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert('Failed to send message. Please try again.');
-      }
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Sorry, there was an error sending your message. Please try again later.');
+        });
     }
   });
 });
