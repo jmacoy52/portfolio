@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Send email using EmailJS
       const templateParams = {
         from_name: nameInput.value.trim(),
-        from_email: emailInput.value.trim(),
-        message: messageInput.value.trim(),
+        from_email: senderEmailInput.value.trim(), // Use sender email for display
+        message: messageInput.value.trim() + '\n\nSender Email: ' + senderEmailInput.value.trim(),
         to_email: 'josephmacoy52@gmail.com',
         reply_to: senderEmailInput.value.trim() // This allows you to reply directly to the sender
       };
