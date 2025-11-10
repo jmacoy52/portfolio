@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Message validation
-    if (messageInput.value.trim().length < 10) {
-      alert('Message must be at least 10 characters long.');
+    if (messageInput.value.trim().length < 2) {
+      alert('Message must be at least 2 characters long.');
       isValid = false;
     }
 
