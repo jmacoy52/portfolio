@@ -6,8 +6,31 @@ document.addEventListener('DOMContentLoaded', function() {
   if (toggleButton && mobileMenu) {
     toggleButton.addEventListener('click', function() {
       mobileMenu.classList.toggle('active');
+      // Change button text/icon based on menu state
+      if (mobileMenu.classList.contains('active')) {
+        toggleButton.textContent = '✕'; // Close icon
+      } else {
+        toggleButton.textContent = '☰'; // Hamburger icon
+      }
     });
   }
+
+  // Close mobile menu when clicking outside or on a link
+  document.addEventListener('click', function(event) {
+    if (!toggleButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.remove('active');
+      toggleButton.textContent = '☰';
+    }
+  });
+
+  // Close mobile menu when a link is clicked
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.remove('active');
+      toggleButton.textContent = '☰';
+    });
+  });
 });
 
 // Function to open modal with project images

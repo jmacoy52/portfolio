@@ -331,6 +331,12 @@ form button:hover {
   font-size: 24px;
   color: #444;
   cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.mobile-menu-toggle:hover {
+  color: #4a4ad8;
 }
 
 .menu.mobile {
@@ -343,12 +349,27 @@ form button:hover {
   background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.menu.mobile.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .menu.mobile a {
   margin: 10px 0;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.menu.mobile a:hover {
+  color: #4a4ad8;
 }
 
 /* ------------------------------
