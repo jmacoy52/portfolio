@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Joseph Migbodzi</title>
+  <meta name="description" content="View my full-stack projects built with React, Node.js, Express & MySQL.">
+  <link rel="stylesheet" href="index.css">
+  <script src="mobile-menu.js" defer></script>
+  <script src="dark-mode.js" defer></script>
+  <script src="back-to-top.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">JM.</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="About.html" class="nav-link">About</a>
+        <a href="Projects.html" class="nav-link active">Projects</a>
+        <a href="Contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+          🌙
+        </button>
+        <a href="assets/Joseph_Migbodzi_CV().pdf" download class="btn btn-primary btn-small">CV</a>
+      </nav>
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="index.html" class="mobile-menu-link">Home</a>
+      <a href="About.html" class="mobile-menu-link">About</a>
+      <a href="Projects.html" class="mobile-menu-link">Projects</a>
+      <a href="Contact.html" class="mobile-menu-link">Contact</a>
+      <button class="theme-toggle" id="dark-mode-toggle-mobile" style="margin-top: 20px;">
+        🌙 Dark Mode
+      </button>
+      <a href="assets/Joseph_Migbodzi_CV().pdf" download class="btn btn-primary" style="margin-top: 20px; display: block; text-align: center;">Download CV</a>
+    </div>
+  </div>
+
+  <!-- Projects Hero -->
+  <section class="projects-hero">
+    <div class="container">
+      <div class="section-header">
+        <h1>My Projects</h1>
+        <p>Full-stack applications, responsive websites, and real-world solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology Section -->
+  <section class="methodology section">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Development Process</h2>
+        <p>Structured approach to building robust applications</p>
+      </div>
+      <div class="methodology-grid">
+        <div class="methodology-step">
+          <div class="methodology-icon">📋</div>
+          <h4>1. Plan</h4>
+          <p>Requirements analysis, architecture design, and roadmap creation</p>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-icon">🎨</div>
+          <h4>2. Design</h4>
+          <p>UI/UX design, database schemas, and component structure</p>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-icon">⚙️</div>
+          <h4>3. Build</h4>
+          <p>Clean code implementation with best practices and testing</p>
+        </div>
+        <div class="methodology-step">
+          <div class="methodology-icon">🚀</div>
+          <h4>4. Deploy</h4>
+          <p>Production deployment, monitoring, and continuous improvement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Detailed view of my portfolio work</p>
+      </div>
+      <div class="projects-grid">
+        <!-- EmploCore -->
+        <div class="project-card">
+          <img src="assets/homepageEmplocore.png" alt="EmploCore" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">EmploCore</h3>
+            <p class="project-description">
+              Full-stack employee management system with authentication, RBAC(Role-Based Access Control), dashboards, MySQL backend, and deployable architecture.
+            </p>
+            <ul class="project-features">
+              <li>JWT authentication & protected routes</li>
+              <li>Role-based dashboards (Admin, HR, Employee)</li>
+              <li>MySQL database with complex queries</li>
+              <li>Responsive design across all devices</li>
+              <li>Production-ready deployment</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">JWT Auth</span>
+              <span class="project-tag">RBAC</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline">GitHub</a>
+              <a href="#" onclick="openModal('emplocore')" class="btn btn-primary">View Screenshots</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fashion Hub -->
+        <div class="project-card">
+          <img src="assets/fashion-hub.png" alt="Fashion Hub" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Fashion Hub</h3>
+            <p class="project-description">
+              Modern fashion e-commerce frontend with responsive design, image gallery, lightbox functionality, and smooth user experience.
+            </p>
+            <ul class="project-features">
+              <li>Fully responsive design</li>
+              <li>Image lightbox gallery</li>
+              <li>Product collections layout</li>
+              <li>Smooth animations & transitions</li>
+              <li>Mobile-first approach</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Responsive</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline">GitHub</a>
+              <a href="#" onclick="openModal('fashion-hub')" class="btn btn-primary">View Screenshots</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brew Haven -->
+        <div class="project-card">
+          <img src="assets/brewhavenTest.png" alt="Brew Haven" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Brew Haven Test</h3>
+            <p class="project-description">
+              Responsive layout testing project demonstrating modern CSS techniques and responsive design patterns.
+            </p>
+            <ul class="project-features">
+              <li>Advanced responsive layouts</li>
+              <li>Modern CSS Grid/Flexbox</li>
+              <li>Mobile-first development</li>
+              <li>Performance optimization</li>
+              <li>Cross-browser compatibility</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Grid/Flexbox</span>
+              <span class="project-tag">Responsive</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline">GitHub</a>
+              <a href="#" onclick="openModal('brewhaven')" class="btn btn-primary">View Screenshots</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Field Work Project - Combined -->
+  <section class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Field Work Project</h2>
+        <p>Wireless Network Setup & Cable Termination - On-field Implementation</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" style="grid-column: 1 / -1;">
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <img src="assets/on-field-work.jpeg" alt="Network Setup" style="width: 48%; height: 250px; object-fit: cover; border-radius: 12px;">
+              <img src="assets/on-field-work2.jpeg" alt="Cable Termination" style="width: 48%; height: 250px; object-fit: cover; border-radius: 12px;">
+            </div>
+            <div class="project-content" style="max-width: none;">
+              <h3 class="project-title">Wireless Network Deployment & Cable Termination</h3>
+              <p class="project-description">
+                Part of a professional team that successfully deployed wireless network infrastructure including access points, cable termination, and network cabling. Hands-on field work experience.
+              </p>
+              <ul class="project-features">
+                <li>Wireless access point installation</li>
+                <li>Cable termination with crimping tools</li>
+                <li>Network cabling and infrastructure setup</li>
+                <li>Team collaboration on large-scale deployment</li>
+                <li>Hands-on technical implementation</li>
+              </ul>
+              <div class="project-tags">
+                <span class="project-tag">Network Infrastructure</span>
+                <span class="project-tag">Cable Termination</span>
+                <span class="project-tag">Wireless Networks</span>
+                <span class="project-tag">Field Work</span>
+                <span class="project-tag">Team Deployment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-images" id="modal-images"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>Joseph Migbodzi</h3>
+          <p>Junior Full-Stack Developer | React • Node.js • MySQL</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="About.html">About</a>
+          <a href="Projects.html">Projects</a>
+          <a href="Contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>josephmacoy52@gmail.com</p>
+          <p>Ghana</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Joseph Migbodzi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    // Modal functions
+    function openModal(projectId) {
+      const modal = document.getElementById('modal');
+      const modalImages = document.getElementById('modal-images');
+      modalImages.innerHTML = '';
+
+      const projectData = {
+        'emplocore': [
+          'assets/homepageEmplocore.png',
+          'assets/login-page.png',
+          'assets/admin-dashboard.png',
+          'assets/hrdashboard.png'
+        ],
+        'fashion-hub': ['assets/fashion-hub.png'],
+        'brewhaven': ['assets/brewhavenTest.png']
+      };
+
+      const images = projectData[projectId] || [];
+      images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Project screenshot';
+        modalImages.appendChild(img);
+      });
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    // Close modal on Escape key
+    document.onkeydown = function(evt) {
+      if (evt.key === 'Escape') {
+        closeModal();
+      }
+    };
+  </script>
+</body>
+</html>
+

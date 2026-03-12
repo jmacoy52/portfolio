@@ -1,30 +1,32 @@
-// Dark mode toggle functionality
+// Dark mode toggle functionality with CSS variables
 document.addEventListener('DOMContentLoaded', function() {
   const darkModeToggle = document.getElementById('dark-mode-toggle');
   const darkModeToggleMobile = document.getElementById('dark-mode-toggle-mobile');
-  const body = document.body;
+  const html = document.documentElement;
 
   // Check for saved theme preference or default to light mode
-  const currentTheme = localStorage.getItem('theme') || 'light';
-  if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    updateToggleIcon(darkModeToggle, true);
-    updateToggleIcon(darkModeToggleMobile, true);
-  }
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', savedTheme);
+  updateToggleIcon(savedTheme);
 
-  // Toggle dark mode
+  // Toggle dark mode function
   function toggleDarkMode() {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateToggleIcon(darkModeToggle, isDark);
-    updateToggleIcon(darkModeToggleMobile, isDark);
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateToggleIcon(newTheme);
   }
 
   // Update toggle button icon
-  function updateToggleIcon(button, isDark) {
-    if (button) {
-      button.textContent = isDark ? '☀️' : '🌙';
+  function updateToggleIcon(theme) {
+    const icon = theme === 'dark' ? '☀️' : '🌙';
+    if (darkModeToggle) {
+      darkModeToggle.textContent = icon;
+    }
+    if (darkModeToggleMobile) {
+      darkModeToggleMobile.textContent = icon + ' Dark Mode';
     }
   }
 
@@ -35,4 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (darkModeToggleMobile) {
     darkModeToggleMobile.addEventListener('click', toggleDarkMode);
   }
+
+  // Listen for system preference changes
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        updateToggleIcon(newTheme);
+      }
+    });
+  }
 });
+

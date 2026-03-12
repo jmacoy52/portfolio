@@ -1,132 +1,448 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Joseph Migbodzi — Portfolio</title>
-  <link rel="stylesheet" href="index.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph Migbodzi — Junior Full-Stack Developer</title>
+  <meta name="description" content="Junior full-stack developer building end-to-end applications with React, Node.js, Express & MySQL.">
+  <link rel="stylesheet" href="index.css">
   <script src="mobile-menu.js" defer></script>
   <script src="dark-mode.js" defer></script>
   <script src="back-to-top.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="#hero" class="brand">Joseph Migbodzi</a>
-      <nav class="menu">
-        <a href="#hero" class="active">Home</a>
-        <a href="About.html">About</a>
-        <a href="Contact.html">Contact</a>
-        <button id="dark-mode-toggle" class="btn-outline">🌙</button>
-        <a href="assets/Joseph_Migbodzi_CV().pdf" download class="btn">Download CV</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">JM.</a>
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="About.html" class="nav-link">About</a>
+        <a href="Projects.html" class="nav-link">Projects</a>
+        <a href="Contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+          🌙
+        </button>
+        <a href="assets/Joseph_Migbodzi_CV().pdf" download class="btn btn-primary btn-small">CV</a>
       </nav>
-      <button class="mobile-menu-toggle">☰</button>
-      <nav class="menu mobile">
-        <a href="#hero" class="active">Home</a>
-        <a href="About.html">About</a>
-        <a href="Contact.html">Contact</a>
-        <button id="dark-mode-toggle-mobile" class="btn-outline">🌙</button>
-        <a href="assets/Joseph_Migbodzi_CV().pdf" download>Download CV</a>
-      </nav>
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        ☰
+      </button>
     </div>
   </header>
 
-  <section id="hero" class="hero container">
-    <div class="hero-content">
-      <img src="assets/passport-pic.jpeg" alt="Joseph Migbodzi" class="hero-image">
-      <div class="hero-text">
-        <h1>Hi, I’m Joseph Migbodzi</h1>
-        <p>Junior full-stack developer building end‑to‑end applications with React, Node.js, Express & MySQL. I design clean UI, implement authentication & role‑based access control, and debug backend systems.</p>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="index.html" class="mobile-menu-link">Home</a>
+      <a href="About.html" class="mobile-menu-link">About</a>
+      <a href="Projects.html" class="mobile-menu-link">Projects</a>
+      <a href="Contact.html" class="mobile-menu-link">Contact</a>
+      <button class="theme-toggle" id="dark-mode-toggle-mobile" style="margin-top: 20px;" aria-label="Toggle dark mode">
+        🌙 Dark Mode
+      </button>
+      <a href="assets/Joseph_Migbodzi_CV().pdf" download class="btn btn-primary" style="margin-top: 20px; display: block; text-align: center;">Download CV</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Joseph Migbodzi</h1>
+        <p class="hero-title">Junior Full-Stack Developer & IT Systems Enthusiast</p>
+        <p class="hero-description">
+          I build end-to-end web applications using React, Node.js, Express, and MySQL, focusing on clean interfaces and reliable backend systems. I have practical exposure to IT infrastructure and basic networking and experience working with AI/ML system projects as a Certified Data Annotation Specialist at AyaData. I develop user authentication and role-based access systems while continuously expanding my skills in cloud computing through the AWS re/Start program.
+        </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn">View Projects</a>
-        <a href="#contact" class="btn-outline">Contact Me</a>
+          <a href="Projects.html" class="btn btn-primary">View Projects</a>
+          <a href="Contact.html" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="assets/hero_image.jpeg" alt="Joseph Migbodzi" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Workshop Section -->
+  <section class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <h2>WebDev Skill Training Workshop</h2>
+        <p>Hands-on professional web development training</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card workshop-card" style="grid-column: 1 / -1;">
+          <div class="workshop-content">
+            <div class="workshop-images">
+              <img src="assets/workshop.jpeg" alt="WebDev Workshop" class="workshop-image">
+            </div>
+            <div class="workshop-text">
+              <h3>WebDev Skill Training Workshop</h3>
+              <p>Hands-on professional web development training focusing on modern frontend and backend technologies. Gained practical experience with real-world project simulations and team collaboration.</p>
+              <ul class="workshop-features">
+                <li>✅ Modern framework training</li>
+                <li>✅ Team coding exercises</li>
+                <li>✅ Practical project development</li>
+                <li>✅ Industry best practices</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="container section">
-    <h2>About Me</h2>
-    <p>I like creating systems that are easy to use and practical, whether it’s authentication, dashboards, or clean UI layouts. I’m always learning, improving, and exploring new ideas through personal projects. Outside of coding, I enjoy listening to music — it helps me think, relax, and sometimes even come up with better solutions.</p>
-  </section>
-
-  <section id="skills" class="container section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span>ReactJS</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Node.js</span>
-      <span>Express</span>
-      <span>MySQL</span>
-      <span>REST APIs</span>
-      <span>JWT Auth</span>
-      <span>Git & GitHub</span>
-      <span>Postman</span>
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🚀</div>
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💼</div>
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="projects" class="container section">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/homepageEmplocore.png" alt="EmploCore Homepage" style="width:100%; border-radius:8px; margin-bottom:10px;">
-        <h3>EmploCore</h3>
-        <p>Full‑stack employee management system with authentication, RBAC(Role-Based Access Control), dashboards, MySQL backend, and deployable architecture.</p>
-        <div class="project-links">
-          <a href="https://github.com/jmacoy52" target="_blank" class="btn-outline">GitHub</a>
-          <button class="btn view-btn" onclick="openModal('emplocore')">View</button>
+  <!-- Philosophy Section -->
+  <section class="philosophy section">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Development Philosophy</h2>
+        <p>Core principles that guide every project I build</p>
+      </div>
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">💡</div>
+          <h3>Clean Code</h3>
+          <p>Writing maintainable, well-structured code that others can understand and build upon is my priority.</p>
+        </div>
+        <div class="philosophy-card">
+          <div class="philosophy-icon">🔒</div>
+          <h3>Security First</h3>
+          <p>Implementing robust authentication, authorization, and data protection from the ground up.</p>
+        </div>
+        <div class="philosophy-card">
+          <div class="philosophy-icon">🎨</div>
+          <h3>User-Centric</h3>
+          <p>Designing intuitive interfaces that provide seamless user experiences across all devices.</p>
         </div>
       </div>
-      <div class="project-card">
-        <img src="assets/fashion-hub.png" alt="Fashion Hub Screenshot" style="width:100%; border-radius:8px; margin-bottom:10px;">
-        <h3>Fashion Hub</h3>
-        <p>A simple fashion e-commerce front-end built with HTML, CSS, and JavaScript (for lightbox and sliders only). Includes homepage, collections, gallery with lightbox preview, and responsive design.</p>
-        <div class="project-links">
-          <a href="https://github.com/jmacoy52" target="_blank" class="btn-outline">GitHub</a>
-          <button class="btn view-btn" onclick="openModal('fashion-hub')">View</button>
-        </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technical Skills</h2>
+        <p>Technologies I work with</p>
       </div>
-      <div class="project-card">
-        <img src="assets/brewhavenTest.png" alt="Brew Haven Test Screenshot" style="width:100%; border-radius:8px; margin-bottom:10px;">
-        <h3>Brew Haven Test</h3>
-        <p>A simple HTML/CSS project for testing responsiveness and layout</p>
-        <div class="project-links">
-          <a href="https://github.com/jmacoy52" target="_blank" class="btn-outline">GitHub</a>
-          <button class="btn view-btn" onclick="openModal('brewhaven')">View</button>
+      <div class="skills-grid">
+        <span class="skill-tag">ReactJS</span>
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Express</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">JWT Auth</span>
+        <span class="skill-tag">Git & GitHub</span>
+        <span class="skill-tag">Postman</span>
+        <span class="skill-tag">Responsive Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>A showcase of my recent work</p>
+      </div>
+      <div class="projects-grid">
+        <!-- EmploCore -->
+        <div class="project-card">
+          <img src="assets/homepageEmplocore.png" alt="EmploCore" class="project-image" onclick="openModal('emplocore')">
+          <div class="project-content">
+            <h3 class="project-title">EmploCore</h3>
+            <p class="project-description">
+              Full-stack employee management system with authentication, RBAC, dashboards, MySQL backend, and deployable architecture.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+              <button class="btn btn-primary btn-small" onclick="openModal('emplocore')">View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fashion Hub -->
+        <div class="project-card">
+          <img src="assets/fashion-hub.png" alt="Fashion Hub" class="project-image" onclick="openModal('fashion-hub')">
+          <div class="project-content">
+            <h3 class="project-title">Fashion Hub</h3>
+            <p class="project-description">
+              A fashion e-commerce frontend with homepage, collections, gallery with lightbox preview, and responsive design.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+              <button class="btn btn-primary btn-small" onclick="openModal('fashion-hub')">View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brew Haven -->
+        <div class="project-card">
+          <img src="assets/brewhavenTest.png" alt="Brew Haven" class="project-image" onclick="openModal('brewhaven')">
+          <div class="project-content">
+            <h3 class="project-title">Brew Haven Test</h3>
+            <p class="project-description">
+              A responsive HTML/CSS project testing layout and design patterns.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Responsive</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+              <button class="btn btn-primary btn-small" onclick="openModal('brewhaven')">View</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Modal -->
-  <div id="modal" class="modal">
+  <div class="modal" id="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-images"></div>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-images" id="modal-images"></div>
     </div>
   </div>
 
-  <section id="contact" class="container section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:josephmacoy52@gmail.com">josephmacoy52@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/jmacoy52" target="_blank">github.com/jmacoy52</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/joseph-migbodzi-a92b19249" target="_blank">linkedin.com/in/joseph-migbodzi-a92b19249</a></p>
+  <!-- Navigation Cards -->
+  <section class="nav-cards section">
+    <div class="container">
+      <div class="nav-cards-grid">
+        <a href="About.html" class="nav-card">
+          <div class="nav-card-icon">👨‍💻</div>
+          <h3>About Me</h3>
+          <p>Learn more about my background, experience, and journey as a developer.</p>
+        </a>
+        <a href="Projects.html" class="nav-card">
+          <div class="nav-card-icon">🚀</div>
+          <h3>My Projects</h3>
+          <p>Explore my portfolio of full-stack applications and web development work.</p>
+        </a>
+        <a href="Contact.html" class="nav-card">
+          <div class="nav-card-icon">📧</div>
+          <h3>Get In Touch</h3>
+          <p>Have a project in mind? Let's connect and discuss how I can help.</p>
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="back-to-top">↑</button>
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Start a Project?</h2>
+      <p>I'm currently available for freelance work and full-time opportunities. Let's build something great together.</p>
+      <a href="Contact.html" class="btn">Let's Talk</a>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section class="contact section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Feel free to reach out for collaborations or just a friendly hello</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>josephmacoy52@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>Ghana</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/jmacoy52" target="_blank" class="social-link github" aria-label="GitHub">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/joseph-migbodzi-a92b19249" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:josephmacoy52@gmail.com" class="social-link email" aria-label="Email">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 Joseph Migbodzi</p>
-      <div class="social-links">
-        <a href="https://github.com/jmacoy52" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/joseph-migbodzi-a92b19249" target="_blank">LinkedIn</a>
-        <a href="mailto:josephmacoy52@gmail.com">Email</a>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>Joseph Migbodzi</h3>
+          <p>Junior Full-Stack Developer building modern web applications with React, Node.js, and MySQL.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="About.html">About</a>
+          <a href="Projects.html">Projects</a>
+          <a href="Contact.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>josephmacoy52@gmail.com</p>
+          <p>Ghana</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Joseph Migbodzi. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    // Modal functions
+    function openModal(projectId) {
+      const modal = document.getElementById('modal');
+      const modalImages = document.getElementById('modal-images');
+      modalImages.innerHTML = '';
+
+      const projectData = {
+        'emplocore': [
+          'assets/homepageEmplocore.png',
+          'assets/login-page.png',
+          'assets/admin-dashboard.png',
+          'assets/hrdashboard.png'
+        ],
+        'fashion-hub': ['assets/fashion-hub.png'],
+        'brewhaven': ['assets/brewhavenTest.png']
+      };
+
+      const images = projectData[projectId] || [];
+      images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Project screenshot';
+        modalImages.appendChild(img);
+      });
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    // Close modal on Escape key
+    document.onkeydown = function(evt) {
+      if (evt.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    // Contact form handling
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formStatus = document.getElementById('formStatus');
+      formStatus.className = 'form-status success';
+      formStatus.textContent = 'Thank you for your message! I will get back to you soon.';
+      this.reset();
+      setTimeout(() => {
+        formStatus.className = 'form-status';
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
+
