@@ -185,6 +185,26 @@
         <p>A showcase of my recent work</p>
       </div>
       <div class="projects-grid">
+        <!-- GetEduVate -->
+        <div class="project-card">
+          <img src="assets/geteduvate-landing.webp" alt="GetEduVate school management platform" class="project-image" loading="lazy" onclick="openModal('geteduvate')">
+          <div class="project-content">
+            <h3 class="project-title">GetEduVate</h3>
+            <p class="project-description">
+              Live multi-school management platform for Ghanaian KG&ndash;JHS schools, built and deployed on a Laravel SaaS foundation.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Multi-tenant</span>
+            </div>
+            <div class="project-links">
+              <a href="https://geteduvate.com" target="_blank" rel="noopener" class="btn btn-outline btn-small">Live Site</a>
+              <button class="btn btn-primary btn-small" onclick="openModal('geteduvate')">View</button>
+            </div>
+          </div>
+        </div>
+
         <!-- EmploCore -->
         <div class="project-card">
           <img src="assets/homepageEmplocore.png" alt="EmploCore" class="project-image" onclick="openModal('emplocore')">
@@ -199,7 +219,7 @@
               <span class="project-tag">MySQL</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+              <a href="https://github.com/jmacoy52/emplocore-backend-v2" target="_blank" class="btn btn-outline btn-small">GitHub</a>
               <button class="btn btn-primary btn-small" onclick="openModal('emplocore')">View</button>
             </div>
           </div>
@@ -219,28 +239,8 @@
               <span class="project-tag">JavaScript</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+              <a href="https://github.com/jmacoy52/fashion-hub" target="_blank" class="btn btn-outline btn-small">GitHub</a>
               <button class="btn btn-primary btn-small" onclick="openModal('fashion-hub')">View</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Brew Haven -->
-        <div class="project-card">
-          <img src="assets/brewhavenTest.png" alt="Brew Haven" class="project-image" onclick="openModal('brewhaven')">
-          <div class="project-content">
-            <h3 class="project-title">Brew Haven Test</h3>
-            <p class="project-description">
-              A responsive HTML/CSS project testing layout and design patterns.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">Responsive</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
-              <button class="btn btn-primary btn-small" onclick="openModal('brewhaven')">View</button>
             </div>
           </div>
         </div>
@@ -372,7 +372,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Joseph Migbodzi. All rights reserved.</p>
+        <p>&copy; 2026 Joseph Migbodzi. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -388,14 +388,19 @@
       modalImages.innerHTML = '';
 
       const projectData = {
+        'geteduvate': [
+          'assets/geteduvate-landing.webp',
+          'assets/geteduvate-school-site.webp',
+          'assets/geteduvate-report-card.webp',
+          'assets/geteduvate-attendance.webp'
+        ],
         'emplocore': [
           'assets/homepageEmplocore.png',
           'assets/login-page.png',
           'assets/admin-dashboard.png',
           'assets/hrdashboard.png'
         ],
-        'fashion-hub': ['assets/fashion-hub.png'],
-        'brewhaven': ['assets/brewhavenTest.png']
+        'fashion-hub': ['assets/fashion-hub.png']
       };
 
       const images = projectData[projectId] || [];

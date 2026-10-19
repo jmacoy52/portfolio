@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Joseph Migbodzi</title>
-  <meta name="description" content="View my full-stack projects built with React, Node.js, Express & MySQL.">
+  <meta name="description" content="Full-stack projects built with React, Node.js, Express, Laravel & MySQL, including the live GetEduVate school platform.">
   <link rel="stylesheet" href="index.css">
   <script src="mobile-menu.js" defer></script>
   <script src="dark-mode.js" defer></script>
@@ -96,6 +96,36 @@
         <p>Detailed view of my portfolio work</p>
       </div>
       <div class="projects-grid">
+        <!-- GetEduVate -->
+        <div class="project-card">
+          <img src="assets/geteduvate-landing.webp" alt="GetEduVate school management platform" class="project-image" loading="lazy">
+          <div class="project-content">
+            <h3 class="project-title">GetEduVate</h3>
+            <p class="project-description">
+              Live multi-school management platform for private KG&ndash;JHS schools in Ghana. Built and deployed on a Laravel SaaS foundation, which I rebranded, customised and run in production.
+            </p>
+            <ul class="project-features">
+              <li>Multi-tenant: one database and subdomain per school</li>
+              <li>Students, attendance, fees and printable receipts</li>
+              <li>Exams, results and report cards</li>
+              <li>A public website for every school</li>
+              <li>Self-managed VPS: Nginx, PHP 8.3, MySQL 8, Cloudflare</li>
+            </ul>
+            <div class="project-tags">
+              <span class="project-tag">Laravel 10</span>
+              <span class="project-tag">PHP 8.3</span>
+              <span class="project-tag">MySQL 8</span>
+              <span class="project-tag">Multi-tenant SaaS</span>
+              <span class="project-tag">Nginx</span>
+              <span class="project-tag">Cloudflare</span>
+            </div>
+            <div class="project-links">
+              <a href="https://geteduvate.com" target="_blank" rel="noopener" class="btn btn-outline">Live Site</a>
+              <a href="#" onclick="openModal('geteduvate'); return false;" class="btn btn-primary">View Screenshots</a>
+            </div>
+          </div>
+        </div>
+
         <!-- EmploCore -->
         <div class="project-card">
           <img src="assets/homepageEmplocore.png" alt="EmploCore" class="project-image">
@@ -120,8 +150,8 @@
               <span class="project-tag">RBAC</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline">GitHub</a>
-              <a href="#" onclick="openModal('emplocore')" class="btn btn-primary">View Screenshots</a>
+              <a href="https://github.com/jmacoy52/emplocore-backend-v2" target="_blank" class="btn btn-outline">GitHub</a>
+              <a href="#" onclick="openModal('emplocore'); return false;" class="btn btn-primary">View Screenshots</a>
             </div>
           </div>
         </div>
@@ -148,36 +178,8 @@
               <span class="project-tag">Responsive</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline">GitHub</a>
-              <a href="#" onclick="openModal('fashion-hub')" class="btn btn-primary">View Screenshots</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Brew Haven -->
-        <div class="project-card">
-          <img src="assets/brewhavenTest.png" alt="Brew Haven" class="project-image">
-          <div class="project-content">
-            <h3 class="project-title">Brew Haven Test</h3>
-            <p class="project-description">
-              Responsive layout testing project demonstrating modern CSS techniques and responsive design patterns.
-            </p>
-            <ul class="project-features">
-              <li>Advanced responsive layouts</li>
-              <li>Modern CSS Grid/Flexbox</li>
-              <li>Mobile-first development</li>
-              <li>Performance optimization</li>
-              <li>Cross-browser compatibility</li>
-            </ul>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">Grid/Flexbox</span>
-              <span class="project-tag">Responsive</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline">GitHub</a>
-              <a href="#" onclick="openModal('brewhaven')" class="btn btn-primary">View Screenshots</a>
+              <a href="https://github.com/jmacoy52/fashion-hub" target="_blank" class="btn btn-outline">GitHub</a>
+              <a href="#" onclick="openModal('fashion-hub'); return false;" class="btn btn-primary">View Screenshots</a>
             </div>
           </div>
         </div>
@@ -255,7 +257,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Joseph Migbodzi. All rights reserved.</p>
+        <p>&copy; 2026 Joseph Migbodzi. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -271,14 +273,19 @@
       modalImages.innerHTML = '';
 
       const projectData = {
+        'geteduvate': [
+          'assets/geteduvate-landing.webp',
+          'assets/geteduvate-school-site.webp',
+          'assets/geteduvate-report-card.webp',
+          'assets/geteduvate-attendance.webp'
+        ],
         'emplocore': [
           'assets/homepageEmplocore.png',
           'assets/login-page.png',
           'assets/admin-dashboard.png',
           'assets/hrdashboard.png'
         ],
-        'fashion-hub': ['assets/fashion-hub.png'],
-        'brewhaven': ['assets/brewhavenTest.png']
+        'fashion-hub': ['assets/fashion-hub.png']
       };
 
       const images = projectData[projectId] || [];
