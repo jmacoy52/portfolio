@@ -128,30 +128,32 @@
 
         <!-- EmploCore -->
         <div class="project-card">
-          <img src="assets/homepageEmplocore.png" alt="EmploCore" class="project-image">
+          <img src="assets/homepageEmplocore.png" alt="EmploCore employee management platform" class="project-image">
           <div class="project-content">
             <h3 class="project-title">EmploCore</h3>
             <p class="project-description">
-              Full-stack employee management system with authentication, RBAC(Role-Based Access Control), dashboards, MySQL backend, and deployable architecture.
+              Production-ready employee management product with secure sign-in, role-based access and an audit trail. React 19 + React Router + Axios (plain CSS) frontend on Vercel, Node.js/Express REST API on Render, MySQL 8 on Aiven over TLS.
             </p>
             <ul class="project-features">
-              <li>JWT authentication & protected routes</li>
-              <li>Role-based dashboards (Admin, HR, Employee)</li>
-              <li>MySQL database with complex queries</li>
-              <li>Responsive design across all devices</li>
-              <li>Production-ready deployment</li>
+              <li>JWT + bcrypt auth with server-side logout</li>
+              <li>Admin, HR and Employee roles; account activation and admin password reset</li>
+              <li>Departments management and audit logs</li>
+              <li>REST API with validation, rate limiting and Helmet</li>
+              <li>Raw SQL via mysql2, versioned migrations, automated tests</li>
             </ul>
             <div class="project-tags">
-              <span class="project-tag">MySQL</span>
-              <span class="project-tag">Express</span>
-              <span class="project-tag">React</span>
+              <span class="project-tag">React 19</span>
               <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">MySQL 8</span>
               <span class="project-tag">JWT Auth</span>
               <span class="project-tag">RBAC</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/jmacoy52/emplocore-backend-v2" target="_blank" class="btn btn-outline">GitHub</a>
-              <a href="#" onclick="openModal('emplocore'); return false;" class="btn btn-primary">View Screenshots</a>
+            <div class="project-links" style="flex-wrap: wrap;">
+              <a href="https://emplocore.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">Live Demo</a>
+              <a href="https://github.com/jmacoy52/employee-management-system-frontend" target="_blank" rel="noopener" class="btn btn-outline">Frontend</a>
+              <a href="https://github.com/jmacoy52/employee-management-backend" target="_blank" rel="noopener" class="btn btn-outline">Backend</a>
+              <a href="#" onclick="openModal('emplocore'); return false;" class="btn btn-outline">Screenshots</a>
             </div>
           </div>
         </div>
