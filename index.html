@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joseph Migbodzi — Junior Full-Stack Developer</title>
-  <meta name="description" content="Junior full-stack developer building end-to-end applications with React, Node.js, Express & MySQL.">
+  <title>Joseph Migbodzi — Full-Stack Developer</title>
+  <meta name="description" content="Full-stack developer and Platform Lead at GetEduVate, building with MySQL, Express, React & Node.js, plus PHP/Laravel.">
   <link rel="stylesheet" href="index.css">
   <script src="mobile-menu.js" defer></script>
   <script src="dark-mode.js" defer></script>
@@ -26,7 +26,7 @@
         <button class="theme-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
           🌙
         </button>
-        <a href="assets/Joseph_Migbodzi_CV().pdf" download class="btn btn-primary btn-small">CV</a>
+        <a href="assets/Joseph_Migbodzi_CV.pdf" download class="btn btn-primary btn-small">CV</a>
       </nav>
       <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
         ☰
@@ -44,7 +44,7 @@
       <button class="theme-toggle" id="dark-mode-toggle-mobile" style="margin-top: 20px;" aria-label="Toggle dark mode">
         🌙 Dark Mode
       </button>
-      <a href="assets/Joseph_Migbodzi_CV().pdf" download class="btn btn-primary" style="margin-top: 20px; display: block; text-align: center;">Download CV</a>
+      <a href="assets/Joseph_Migbodzi_CV.pdf" download class="btn btn-primary" style="margin-top: 20px; display: block; text-align: center;">Download CV</a>
     </div>
   </div>
 
@@ -54,9 +54,9 @@
       <div class="hero-content">
         <p class="hero-greeting">Hello, I'm</p>
         <h1 class="hero-name">Joseph Migbodzi</h1>
-        <p class="hero-title">Junior Full-Stack Developer & IT Systems Enthusiast</p>
+        <p class="hero-title">Full-Stack Developer &amp; Platform Lead at GetEduVate</p>
         <p class="hero-description">
-          I build end-to-end web applications using React, Node.js, Express, and MySQL, focusing on clean interfaces and reliable backend systems. I have practical exposure to IT infrastructure and basic networking and experience working with AI/ML system projects as a Certified Data Annotation Specialist at AyaData. I develop user authentication and role-based access systems while continuously expanding my skills in cloud computing through the AWS re/Start program.
+          As Platform Lead at <a href="https://geteduvate.com" target="_blank" rel="noopener">GetEduVate</a>, I run a multi-tenant school management platform end to end: the production server, deployments and the super admin. My main stack is MySQL, Express, React and Node.js, with PHP and Laravel as my second stack, focusing on clean interfaces and reliable backend systems. I have practical exposure to IT infrastructure and basic networking and experience working with AI/ML system projects as a Certified Data Annotation Specialist at AyaData. I develop user authentication and role-based access systems while continuously expanding my skills in cloud computing through the AWS re/Start program.
         </p>
         <div class="hero-buttons">
           <a href="Projects.html" class="btn btn-primary">View Projects</a>
@@ -101,26 +101,16 @@
   <!-- Stats Section -->
   <section class="stats">
     <div class="container">
-      <div class="stats-grid">
+      <div class="stats-grid stats-grid--two">
         <div class="stat-card">
           <div class="stat-icon">🚀</div>
           <div class="stat-number">5+</div>
           <div class="stat-label">Projects Completed</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">⚡</div>
-          <div class="stat-number">10+</div>
-          <div class="stat-label">Technologies</div>
-        </div>
-        <div class="stat-card">
           <div class="stat-icon">💼</div>
           <div class="stat-number">2+</div>
           <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">🎯</div>
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Client Satisfaction</div>
         </div>
       </div>
     </div>
@@ -160,14 +150,20 @@
         <h2>Technical Skills</h2>
         <p>Technologies I work with</p>
       </div>
+      <p style="text-align:center; margin-bottom:20px;"><strong>Main stack:</strong> MySQL · Express · React · Node.js &nbsp;|&nbsp; <strong>Second stack:</strong> PHP · Laravel</p>
       <div class="skills-grid">
-        <span class="skill-tag">ReactJS</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Express</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">Laravel</span>
+        <span class="skill-tag">Nginx</span>
+        <span class="skill-tag">Linux Server Administration</span>
+        <span class="skill-tag">Cloudflare</span>
         <span class="skill-tag">HTML5</span>
         <span class="skill-tag">CSS3</span>
         <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Express</span>
-        <span class="skill-tag">MySQL</span>
         <span class="skill-tag">REST APIs</span>
         <span class="skill-tag">JWT Auth</span>
         <span class="skill-tag">Git & GitHub</span>
@@ -185,6 +181,27 @@
         <p>A showcase of my recent work</p>
       </div>
       <div class="projects-grid">
+        <!-- GetEduVate -->
+        <div class="project-card">
+          <img src="assets/geteduvate-landing.webp" alt="GetEduVate school management platform" class="project-image" loading="lazy" onclick="openModal('geteduvate')">
+          <div class="project-content">
+            <h3 class="project-title">GetEduVate</h3>
+            <p class="project-description">
+              Live multi-school management platform for Ghanaian KG&ndash;JHS schools, built on a Laravel SaaS foundation. As Platform Lead, I refactored and customised the codebase and run it in production.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">Multi-tenant</span>
+            </div>
+            <div class="project-links">
+              <a href="https://geteduvate.com" target="_blank" rel="noopener" class="btn btn-outline btn-small">Live Site</a>
+              <button class="btn btn-primary btn-small" onclick="openModal('geteduvate')">View</button>
+            </div>
+          </div>
+        </div>
+
         <!-- EmploCore -->
         <div class="project-card">
           <img src="assets/homepageEmplocore.png" alt="EmploCore" class="project-image" onclick="openModal('emplocore')">
@@ -194,12 +211,13 @@
               Full-stack employee management system with authentication, RBAC, dashboards, MySQL backend, and deployable architecture.
             </p>
             <div class="project-tags">
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Express</span>
               <span class="project-tag">React</span>
               <span class="project-tag">Node.js</span>
-              <span class="project-tag">MySQL</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+              <a href="https://github.com/jmacoy52/emplocore-backend-v2" target="_blank" class="btn btn-outline btn-small">GitHub</a>
               <button class="btn btn-primary btn-small" onclick="openModal('emplocore')">View</button>
             </div>
           </div>
@@ -219,28 +237,8 @@
               <span class="project-tag">JavaScript</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
+              <a href="https://github.com/jmacoy52/fashion-hub" target="_blank" class="btn btn-outline btn-small">GitHub</a>
               <button class="btn btn-primary btn-small" onclick="openModal('fashion-hub')">View</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Brew Haven -->
-        <div class="project-card">
-          <img src="assets/brewhavenTest.png" alt="Brew Haven" class="project-image" onclick="openModal('brewhaven')">
-          <div class="project-content">
-            <h3 class="project-title">Brew Haven Test</h3>
-            <p class="project-description">
-              A responsive HTML/CSS project testing layout and design patterns.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">Responsive</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jmacoy52" target="_blank" class="btn btn-outline btn-small">GitHub</a>
-              <button class="btn btn-primary btn-small" onclick="openModal('brewhaven')">View</button>
             </div>
           </div>
         </div>
@@ -356,7 +354,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <h3>Joseph Migbodzi</h3>
-          <p>Junior Full-Stack Developer building modern web applications with React, Node.js, and MySQL.</p>
+          <p>Full-Stack Developer building with MySQL, Express, React &amp; Node.js, plus PHP/Laravel.</p>
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
@@ -372,7 +370,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Joseph Migbodzi. All rights reserved.</p>
+        <p>&copy; 2026 Joseph Migbodzi. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -388,14 +386,19 @@
       modalImages.innerHTML = '';
 
       const projectData = {
+        'geteduvate': [
+          'assets/geteduvate-landing.webp',
+          'assets/geteduvate-school-site.webp',
+          'assets/geteduvate-report-card.webp',
+          'assets/geteduvate-attendance.webp'
+        ],
         'emplocore': [
           'assets/homepageEmplocore.png',
           'assets/login-page.png',
           'assets/admin-dashboard.png',
           'assets/hrdashboard.png'
         ],
-        'fashion-hub': ['assets/fashion-hub.png'],
-        'brewhaven': ['assets/brewhavenTest.png']
+        'fashion-hub': ['assets/fashion-hub.png']
       };
 
       const images = projectData[projectId] || [];

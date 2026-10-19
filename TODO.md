@@ -4,7 +4,7 @@
 - [x] 1.1 Create unified CSS with CSS variables (index.css rewrite)
 - [x] 1.2 Implement light/dark mode color scheme
 - [x] 1.3 Add smooth transitions and custom scrollbar
-- [ ] 1.4 Delete duplicate styles (about.css, contact.css)
+- [x] 1.4 Delete duplicate styles (about.css, contact.css)
 
 ## Phase 2: Home Page (index.html)
 - [x] 2.1 Redesign hero section
